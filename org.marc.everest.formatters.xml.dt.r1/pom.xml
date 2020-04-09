@@ -13,6 +13,7 @@
   	</dependency>
   </dependencies>
   <build>
+  <pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -30,43 +31,48 @@
 						<link>http://docs.oracle.com/javase/6/docs/api/</link>
 						<link>http://te.marc-hi.ca/library/en/jdoc/jev/</link>
 					</links>
+					<additionalparam>-Xdoclint:none</additionalparam>
+					<additionalOptions>-Xdoclint:none</additionalOptions>
+					<additionalJOption>-Xdoclint:none</additionalJOption>
 				</configuration>
 			</plugin>
-        </plugins>
+
+			</plugins>
+		</pluginManagement>
+			
     </build>
 		<issueManagement>
-	    <url>http://te.marc-hi.ca/issue/default.aspx?project=6e2de429beae44359a1b23975a90a71b</url>
+	    <url>https://github.com/santedb/jeverest/issues</url>
     </issueManagement>
 
 	<developers>
 	    <developer>
 	        <name>Justin Fyfe</name>
-	        <organization>Mohawk College of Applied Arts and Technology</organization>
-	        <email>justin_dot_fyfe1_at_mohawkcollege_dot_ca</email>
+	        <organization>Fyfe Software Inc.</organization>
+	        <email>justin_at_fyfesoftware_dot_ca</email>
 	    </developer>
 	</developers>
-  
 	<scm>
-		<url>https://fisheye.marc-hi.ca/svn/jEverest/tags/1.0.17/org.marc.everest.formatters.xml.dt.r1</url>
+		<url>https://github.com/santedb/jeverest</url>
 	</scm>
-	<repositories>
-		<repository>
-			<id>marc-te-main</id>
-			<url>http://te.marc-hi.ca/mvn</url>
-		</repository>
-	</repositories>
-	<organization>
-		<name>Mohawk College of Applied Arts and Technology</name>
-		<url>http://everest.marc-hi.ca</url>
-	</organization>
-	  <distributionManagement>
+ <repositories>
+  	<repository>
+  		<id>santesute-main</id>
+  		<url>http://santesuite.org/mvn</url>
+  		<name>SanteSuite</name>
+  	</repository>
+  </repositories>
+  <distributionManagement>
  		<site>
-          <id>marc-te-main-doc-distro</id>
-          <url>file://M:/org/marc/everest/everest-formatters-xml-dt-r1</url>
+          <id>santesuite-main-doc-distro</id>
+          <url>file://M:/org/marc/everest</url>
       </site>
       <repository>
-          <id>marc-te-main-distro</id>
+          <id>santesuite-main-distro</id>
           <url>file://M:/</url>
       </repository>
+
   </distributionManagement>
+  
+  
 </project>

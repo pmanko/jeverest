@@ -28,16 +28,40 @@
       </dependency>
   </dependencies>
 	<scm>
-		<url>https://fisheye.marc-hi.ca/svn/jEverest/tags/1.0.17/samples/org.marc.everest.samples.connectors.spring.client</url>
+		<url>https://github.com/santedb/jeverest</url>
 	</scm>
 	<repositories>
-		<repository>
-			<id>marc-te-main</id>
-			<url>http://te.marc-hi.ca/mvn</url>
-		</repository>
-	</repositories>
+  	<repository>
+  		<id>santesute-main</id>
+  		<url>http://santesuite.org/mvn</url>
+  		<name>SanteSuite</name>
+  	</repository>
+  </repositories>
+  <developers>
+	    <developer>
+	        <name>Justin Fyfe</name>
+	        <organization>Fyfe Software Inc.</organization>
+	        <email>justin_at_fyfesoftware_dot_ca</email>
+	    </developer>
+	</developers>
 	<organization>
-		<name>Mohawk College of Applied Arts and Technology</name>
-		<url>http://everest.marc-hi.ca</url>
+		<name>SanteSuite Community</name>
+		<url>http://santesuite.org</url>
 	</organization>  
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<configuration>
+						<additionalparam>-Xdoclint:none</additionalparam>
+						<additionalOptions>-Xdoclint:none</additionalOptions>
+						<additionalJOption>-Xdoclint:none</additionalJOption>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>

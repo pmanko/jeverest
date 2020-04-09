@@ -5,38 +5,41 @@
 	<version>1.0.17</version>
 	<name>org.marc.everest</name>
 	<description>MARC-HI Everest Framework 1.0</description>
-	<issueManagement>
-	    <url>http://te.marc-hi.ca/issue/default.aspx?project=6e2de429beae44359a1b23975a90a71b</url>
-    </issueManagement>
+	 <url>http://santesuite.org/mvn/org/marc/everest/</url>
+  <organization>
+  	<name>SanteSuite Community</name>
+  	<url>http://santesuite.org</url>
+  </organization>
+  <scm>
+  	<url>https://github.com/santedb/jeverest</url>
+  </scm>
+  	<issueManagement><url>https://github.com/santedb/jeverest/issues</url></issueManagement>
 	<developers>
 	    <developer>
 	        <name>Justin Fyfe</name>
-	        <organization>Mohawk College of Applied Arts and Technology</organization>
-	        <email>justin_dot_fyfe1_at_mohawkcollege_dot_ca</email>
+	        <organization>Fyfe Software Inc.</organization>
+	        <email>justin_at_fyfesoftware_dot_ca</email>
 	    </developer>
 	</developers>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<links>
-						<link>http://docs.oracle.com/javase/6/docs/api/</link>
-					</links>
-				</configuration>
-			</plugin>
-			
-		</plugins>
-	</build>
+  
+  <repositories>
+  	<repository>
+  		<id>santesute-main</id>
+  		<url>http://santesuite.org/mvn</url>
+  		<name>SanteSuite</name>
+  	</repository>
+  </repositories>
+  <distributionManagement>
+ 		<site>
+          <id>santesuite-main-doc-distro</id>
+          <url>file://M:/org/marc/everest</url>
+      </site>
+      <repository>
+          <id>santesuite-main-distro</id>
+          <url>file://M:/</url>
+      </repository>
+
+  </distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -46,29 +49,21 @@
 		</dependency>
 	</dependencies>
 	
-	<scm>
-		<url>https://fisheye.marc-hi.ca/svn/jEverest/tags/1.0.17/org.marc.everest</url>
-	</scm>
-	<repositories>
-		<repository>
-			<id>marc-te-main</id>
-			<url>http://te.marc-hi.ca/mvn</url>
-		</repository>
-	</repositories>
-	<organization>
-		<name>Mohawk College of Applied Arts and Technology</name>
-		<url>http://everest.marc-hi.ca</url>
-	</organization>
-  <distributionManagement>
-      <site>
-          <id>marc-te-main-doc-distro</id>
-          <url>file://M:/org/marc/everest/everest-core</url>
-      </site>
-      <repository>
-          <id>marc-te-main-distro</id>
-          <url>file://M:/</url>
-      </repository>
-      
-  </distributionManagement>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<configuration>
+						<additionalparam>-Xdoclint:none</additionalparam>
+						<additionalOptions>-Xdoclint:none</additionalOptions>
+						<additionalJOption>-Xdoclint:none</additionalJOption>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 	
 </project>
